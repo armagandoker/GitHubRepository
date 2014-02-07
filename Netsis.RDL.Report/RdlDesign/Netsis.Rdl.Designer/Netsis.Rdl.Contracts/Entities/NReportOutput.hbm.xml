@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Netsis.Rdl.Contracts"
+                   namespace="Netsis.Rdl.Contracts.Entities" schema="NETSIS.">
+  <class name="NReportOutput" table="REPORTOUTPUTS" lazy="false" dynamic-update="true" select-before-update="false">
+    <id name="Id" column="ID" >
+      <generator class="native"/>
+    </id>
+    <property name="TaskId" column="TASKID" />    
+    <property name="ReportId" column="REPORTID" />
+    <property name="FileExtension" column="FILEEXTENSION"/>
+    <property name="Data" column="DATA" type="BinaryBlob" not-null="true"/>
+    <property name="Creation" column="CREATION" />
+  </class>
+</hibernate-mapping>
